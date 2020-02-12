@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: dockerfile1
     volumes:
-      - ./project/boxfuse-sample-java-war-hello/target/hello-1.0.war:/usr/local/tomcat/webapps/hello-1.0.war
+      - ./project/boxfuse-sample-java-war-hello/target/:/usr/local/tomcat/webapps/
   prod:
     build:
       context: .
