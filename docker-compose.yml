@@ -1,8 +1,9 @@
 Version '3'
 services:
-  build:
-    context: .
-    dockerfile: dockerfile1
+  costruct:
+    build:
+      context: .
+      dockerfile: dockerfile1
     volumes:
       - ./project/boxfuse-sample-java-war-hello/target/hello-1.0.war:/usr/local/tomcat/webapps/hello-1.0.war
   prod:
@@ -12,5 +13,5 @@ services:
     ports:
       - "8080:8080"
     volumes_from:
-      -container:build
-      -container:build:rw
+      -container:costruct
+      -container:costruct:rw
